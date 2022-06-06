@@ -13,6 +13,7 @@ namespace Bot_V4
 
 
         private DiscordSocketClient _client; //actual discord bot = client
+         string twitch = "https://twitch.tv/ghostxtenshi";
 
         public async Task MainAsync() //creates client
         {
@@ -74,6 +75,11 @@ namespace Bot_V4
             else if(command.Equals("age"))
             {
                 message.Channel.SendMessageAsync($@"Your account was created at {message.Author.CreatedAt.DateTime.Date}");
+            }
+            
+               else if (command.Equals("twitch"))
+            {
+                message.Channel.SendMessageAsync($"Watch the live stream here! \n \n {twitch}");
             }
 
 
